@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaza Humanitarian Relief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0f14;--card:#0f172a;--accent:#22c55e;--accent2:#38bdf8;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.14)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);
+      background:radial-gradient(1200px 600px at 80% -10%, #020617 0%, transparent 60%),
+                 radial-gradient(800px 400px at 0% 10%, #052e1a 0%, transparent 55%),var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}header{position:sticky;top:0;z-index:10;background:rgba(2,6,23,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:900;letter-spacing:.4px}
+.lang{display:flex;gap:8px;flex-wrap:wrap}
+.lang button{padding:6px 10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+.lang button.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#022c22;border:none}
+
+.hero{min-height:92vh;display:grid;place-items:center;padding:70px 0}
+.badge{display:inline-block;padding:8px 14px;border-radius:999px;font-weight:800;font-size:13px;background:rgba(34,197,94,.18);border:1px solid rgba(34,197,94,.45)}
+h1{font-size:clamp(36px,5vw,60px);line-height:1.05;margin:16px 0}
+.lead{color:var(--muted);max-width:680px;font-size:18px}
+.cta{margin-top:26px}
+.btn{padding:15px 22px;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#022c22;border:none;box-shadow:0 12px 40px rgba(34,197,94,.35)}
+
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+@media(max-width:900px){.trust{grid-template-columns:1fr 1fr}}
+.trust .t{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(2,6,23,.4);font-weight:700}
+.trust small{display:block;color:var(--muted);font-weight:500;margin-top:6px}
+
+.gallery{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.gallery{grid-template-columns:1fr}}
+.img{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.img img{width:100%;height:320px;object-fit:cover}
+.img::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(2,6,23,.9))}
+.cap{position:absolute;left:14px;bottom:14px;right:14px;font-weight:800}
+
+.donate{padding:90px 0}
+.card{background:linear-gradient(180deg,rgba(15,23,42,.95),rgba(15,23,42,.8));border:1px solid var(--line);border-radius:26px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.amounts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:16px}
+@media(max-width:900px){.amounts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:500px){.amounts{grid-template-columns:repeat(2,1fr)}}
+.amount{display:flex;align-items:center;justify-content:center;padding:18px;border-radius:18px;font-size:20px;font-weight:900;color:#fff;background:linear-gradient(135deg,#111827,#020617);border:1px solid rgba(255,255,255,.25)}
+.amount:hover{transform:translateY(-2px);border-color:var(--accent)}
+
+.story{padding:60px 0}
+.story-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr}}
+.story img{width:100%;border-radius:22px;border:1px solid var(--line)}
+
+footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo" data-i18n="logo">Gaza Humanitarian Relief</div>
+    <div class="lang">
+      <button class="active" onclick="setLang('en', this)">EN</button>
+      <button onclick="setLang('ar', this)">AR</button>
+      <button onclick="setLang('fr', this)">FR</button>
+      <button onclick="setLang('id', this)">ID</button>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="container">
+    <span class="badge" data-i18n="badge">Emergency Humanitarian Appeal</span>
+    <h1 data-i18n="title">Help Gaza Families Survive<br/>War & Destruction</h1>
+    <p class="lead" data-i18n="lead">Homes destroyed. Families displaced. Your support delivers food, medical aid, and shelter to civilians affected by conflict.</p>
+    <div class="cta"><a href="https://nowpayments.io/donation/gazadonation" class="btn" data-i18n="donateNow">Donate Now</a></div><div class="trust">
+  <div class="t" data-i18n="trust1">Transparent Use of Funds<small data-i18n="trust1s">Clear reporting & updates</small></div>
+  <div class="t" data-i18n="trust2">Humanitarian Focus<small data-i18n="trust2s">Aid for civilians only</small></div>
+  <div class="t" data-i18n="trust3">Secure Links<small data-i18n="trust3s">You choose the provider</small></div>
+  <div class="t" data-i18n="trust4">Global Support<small data-i18n="trust4s">Donors worldwide</small></div>
+</div>
+
+<div class="gallery">
+  <div class="img"><img src="https://www.aljazeera.com/wp-content/uploads/2026/01/AA-20260126-40372193-40372172-PALESTINIAN_FAMILIES_FEAR_ISRAELI_ARMY_PRESENCE_IN_GAZA-1769435477.jpg?resize=770%2C513&quality=80" alt="Destroyed homes"><div class="cap" data-i18n="cap1">Destroyed homes & displacement</div></div>
+  <div class="img"><img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2025-04/250414-Osama-Al-Raqab-gaza-vl-906a-3d2aeb.jpg" alt="Children"><div class="cap" data-i18n="cap2">Children in urgent need</div></div>
+  <div class="img"><img src="https://cdnuploads.aa.com.tr/uploads/Contents/2024/08/23/thumbs_b_c_d85f8b70bdf5d56b6fe032ebcc5bd81d.jpg?v=235645" alt="Mosque"><div class="cap" data-i18n="cap3">Mosques & community centers damaged</div></div>
+</div>
+
+  </div>
+</section><section id="donate" class="donate">
+  <div class="container">
+    <div class="card">
+      <h2 data-i18n="choose">Choose Your Donation</h2>
+      <p data-i18n="every">Every amount makes a difference.</p>
+      <div class="amounts">
+        <a href="https://nowpayments.io/payment/?iid=4432287485" class="amount">$15</a>
+        <a href="https://nowpayments.io/payment/?iid=5901993584" class="amount">$25</a>
+        <a href="https://nowpayments.io/payment/?iid=5500457780" class="amount">$50</a>
+        <a href="https://nowpayments.io/payment/?iid=5096434462" class="amount">$100</a>
+        <a href="https://nowpayments.io/payment/?iid=5409820927" class="amount">$500</a>
+      </div>
+    </div>
+  </div>
+</section><section class="story">
+  <div class="container story-grid">
+    <div>
+      <h2 data-i18n="why">Why Your Help Matters</h2>
+      <p class="lead" data-i18n="whyText">Donations support food distribution, emergency shelter, medical supplies, and essential relief for affected families.</p>
+    </div>
+    <img src="https://www.aljazeera.com/wp-content/uploads/2025/05/AFP__20250504__44EN8ZQ__v1__HighRes__PalestinianIsraelConflict-1746366612.jpg?resize=1920%2C1440" alt="Aid">
+  </div>
+</section><footer>
+  © <span id="year"></span> <span data-i18n="logo">Gaza Humanitarian Relief</span> • <span data-i18n="footer">Transparency • Accountability • Compassion</span>
+</footer><script>
+  const i18n={
+    en:{logo:"Gaza Humanitarian Relief",badge:"Emergency Humanitarian Appeal",title:"Help Gaza Families Survive<br/>War & Destruction",lead:"Homes destroyed. Families displaced. Your support delivers food, medical aid, and shelter to civilians affected by conflict.",donateNow:"Donate Now",trust1:"Transparent Use of Funds",trust1s:"Clear reporting & updates",trust2:"Humanitarian Focus",trust2s:"Aid for civilians only",trust3:"Secure Links",trust3s:"You choose the provider",trust4:"Global Support",trust4s:"Donors worldwide",cap1:"Destroyed homes & displacement",cap2:"Children in urgent need",cap3:"Mosques & community centers damaged",choose:"Choose Your Donation",every:"Every amount makes a difference.",why:"Why Your Help Matters",whyText:"Donations support food distribution, emergency shelter, medical supplies, and essential relief for affected families.",footer:"Transparency • Accountability • Compassion"},
+    ar:{logo:"الإغاثة الإنسانية لغزة",badge:"نداء إنساني طارئ",title:"ساعد عائلات غزة على البقاء<br/>وسط الدمار",lead:"منازل مدمرة وعائلات نازحة. دعمك يوفر الغذاء والرعاية الطبية والمأوى للمدنيين المتضررين.",donateNow:"تبرع الآن",trust1:"شفافية في استخدام التبرعات",trust1s:"تقارير وتحديثات واضحة",trust2:"تركيز إنساني",trust2s:"مساعدة المدنيين فقط",trust3:"روابط آمنة",trust3s:"أنت تختار الجهة",trust4:"دعم عالمي",trust4s:"متبرعون من كل العالم",cap1:"منازل مدمرة ونزوح",cap2:"أطفال بحاجة ماسة",cap3:"تضرر المساجد والمراكز المجتمعية",choose:"اختر قيمة التبرع",every:"كل مبلغ يصنع فرقًا.",why:"لماذا تبرعك مهم",whyText:"تدعم التبرعات الغذاء والمأوى الطارئ والمستلزمات الطبية والإغاثة الأساسية.",footer:"الشفافية • المساءلة • الرحمة"},
+    fr:{logo:"Aide Humanitaire pour Gaza",badge:"Appel Humanitaire Urgent",title:"Aidez les familles de Gaza à survivre<br/>à la destruction",lead:"Maisons détruites, familles déplacées. Votre soutien fournit nourriture, soins médicaux et abris.",donateNow:"Faire un don",trust1:"Utilisation transparente des fonds",trust1s:"Rapports clairs",trust2:"Objectif humanitaire",trust2s:"Aide aux civils uniquement",trust3:"Liens sécurisés",trust3s:"Vous choisissez le service",trust4:"Soutien mondial",trust4s:"Donateurs internationaux",cap1:"Maisons détruites et déplacements",cap2:"Enfants en besoin urgent",cap3:"Mosquées et centres endommagés",choose:"Choisissez votre don",every:"Chaque don compte.",why:"Pourquoi votre aide est essentielle",whyText:"Les dons soutiennent l'alimentation, l'hébergement d'urgence et l'aide médicale.",footer:"Transparence • Responsabilité • Compassion"},
+    id:{logo:"Bantuan Kemanusiaan Gaza",badge:"Seruan Kemanusiaan Darurat",title:"Bantu Keluarga Gaza Bertahan<br/>di Tengah Kehancuran",lead:"Rumah hancur, keluarga mengungsi. Dukungan Anda menyediakan makanan, bantuan medis, dan tempat tinggal bagi warga sipil.",donateNow:"Donasi Sekarang",trust1:"Penggunaan Dana Transparan",trust1s:"Laporan dan pembaruan jelas",trust2:"Fokus Kemanusiaan",trust2s:"Bantuan untuk warga sipil",trust3:"Tautan Aman",trust3s:"Anda memilih penyedia",trust4:"Dukungan Global",trust4s:"Donatur dari seluruh dunia",cap1:"Rumah hancur dan pengungsian",cap2:"Anak-anak sangat membutuhkan bantuan",cap3:"Masjid dan pusat komunitas rusak",choose:"Pilih Donasi Anda",every:"Setiap donasi sangat berarti.",why:"Mengapa Bantuan Anda Penting",whyText:"Donasi mendukung distribusi makanan, tempat tinggal darurat, bantuan medis, dan kebutuhan penting lainnya.",footer:"Transparansi • Akuntabilitas • Kepedulian"}
+  };
+  function setLang(l,btn){document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(i18n[l][k]) el.innerHTML=i18n[l][k];});document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.documentElement.lang=l;document.body.dir=l==='ar'?'rtl':'ltr';}
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script></body>
+</html>
